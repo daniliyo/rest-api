@@ -6,7 +6,7 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class DepartmentRequest extends FormRequest
 {
-    
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -32,9 +32,10 @@ class DepartmentRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'A title is required',
-            'name.unique' => 'A title i2323ed',
-            
+            'name.required' => 'The field must be filled ',
+            'name.unique' => 'The field must be unique',
+            'name.max' => 'The field must be the maximum size',
+
         ];
     }
 }

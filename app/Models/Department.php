@@ -11,6 +11,8 @@ class Department extends Model
 
     public $timestamps = false;
 
+    protected $fillable = ['name'];
+
     public function employee(){
     	return $this->belongsToMany(Department::class);
     }

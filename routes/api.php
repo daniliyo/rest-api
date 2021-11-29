@@ -16,6 +16,9 @@ use App\Http\Controllers\DepartmentController;
 |
 */
 
+//Route::apiResource('department', DepartmentController::class);
 
-Route::post('department/store', [DepartmentController::class, 'store']);
+Route::post('/department/store', [DepartmentController::class, 'store']);
+Route::put('/department/update/{id}', [DepartmentController::class, 'update']);
+//Route::put('/department/update/{$id}', [DepartmentController::class, 'update']);
 
