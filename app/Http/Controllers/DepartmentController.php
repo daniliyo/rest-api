@@ -20,9 +20,8 @@ class DepartmentController extends Controller
      *   @OA\Parameter(
      *      name="page",
      *      in="query",
-     *      required=true,
      *      @OA\Schema(
-     *           type="string"
+     *           type="integer", example="2"
      *      )
      *   ),
      *   @OA\Response(

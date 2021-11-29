@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "REST API 1documention",
+        "title": "REST API documention",
         "version": "1.0.0"
     },
     "servers": [
@@ -22,9 +22,9 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "required": true,
                         "schema": {
-                            "type": "string"
+                            "type": "integer",
+                            "example": "2"
                         }
                     }
                 ],
@@ -138,9 +138,9 @@
                     {
                         "name": "page",
                         "in": "query",
-                        "required": true,
                         "schema": {
-                            "type": "string"
+                            "type": "integer",
+                            "example": "2"
                         }
                     }
                 ],
@@ -170,7 +170,7 @@
                                     "lastname",
                                     "patronymic",
                                     "salary",
-                                    "deportaments"
+                                    "departaments"
                                 ],
                                 "properties": {
                                     "firstname": {
@@ -193,7 +193,7 @@
                                         "type": "integer",
                                         "example": "1900"
                                     },
-                                    "deportaments": {
+                                    "departaments": {
                                         "type": "json",
                                         "example": "{'0': 1, '1': 3}"
                                     }
@@ -231,7 +231,7 @@
                                     "lastname",
                                     "patronymic",
                                     "salary",
-                                    "deportaments"
+                                    "departaments"
                                 ],
                                 "properties": {
                                     "firstname": {
@@ -254,7 +254,7 @@
                                         "type": "integer",
                                         "example": "1900"
                                     },
-                                    "deportaments": {
+                                    "departaments": {
                                         "type": "json",
                                         "example": "{'0': 1, '1': 3}"
                                     }

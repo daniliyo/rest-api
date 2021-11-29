@@ -20,9 +20,8 @@ class EmployeeController extends Controller
      *   @OA\Parameter(
      *      name="page",
      *      in="query",
-     *      required=true,
      *      @OA\Schema(
-     *           type="string"
+     *           type="integer", example="2"
      *      )
      *   ),
      *   @OA\Response(
@@ -73,13 +72,13 @@ class EmployeeController extends Controller
      *   @OA\RequestBody(
      *      required=true,
      *      @OA\JsonContent(
-     *         required={"firstname", "lastname", "patronymic", "salary", "deportaments"},
+     *         required={"firstname", "lastname", "patronymic", "salary", "departaments"},
      *         @OA\Property(property="firstname", type="string", example="Ivan"),
      *         @OA\Property(property="lastname", type="string", example="Ivanov"),
      *         @OA\Property(property="patronymic", type="string", example="Olehovich"),
      *         @OA\Property(property="gender", type="string", example="Female"),
      *         @OA\Property(property="salary", type="integer", example="1900"),
-     *         @OA\Property(property="deportaments", type="json", example="{'0': 1, '1': 3}")
+     *         @OA\Property(property="departaments", type="json", example="{'0': 1, '1': 3}")
      *      )
      *   ),
      *   @OA\Response(
@@ -147,13 +146,13 @@ class EmployeeController extends Controller
      *   @OA\RequestBody(
      *      required=true,
      *      @OA\JsonContent(
-     *         required={"firstname", "lastname", "patronymic", "salary", "deportaments"},
+     *         required={"firstname", "lastname", "patronymic", "salary", "departaments"},
      *         @OA\Property(property="firstname", type="string", example="Ivan"),
      *         @OA\Property(property="lastname", type="string", example="Ivanov"),
      *         @OA\Property(property="patronymic", type="string", example="Olehovich"),
      *         @OA\Property(property="gender", type="string", example="Female"),
      *         @OA\Property(property="salary", type="integer", example="1900"),
-     *         @OA\Property(property="deportaments", type="json", example="{'0': 1, '1': 3}")
+     *         @OA\Property(property="departaments", type="json", example="{'0': 1, '1': 3}")
      *      )
      *   ),
      *   @OA\Response(
