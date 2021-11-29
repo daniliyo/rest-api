@@ -1,33 +1,12 @@
-Установите docker и docker-compose.
+## Rest api
+ТЗ проекта - тестовое задание https://docs.google.com/document/d/1UVdTnZ4gBBuM9oFvHDxoy7PCOtX5ud1DIuj86zoYlGw/edit#heading=h.q3dtajlvbk2e
 
-Скопируйте .env
+Для создания OpenApi в проект был интегрирован Swagger 
+Путь к документации - http://localhost/api/documentation 
 
-```shell
-cp .env.example .env
-```
-
-Ставим зависимости
-```shell
-docker-compose run --rm back composer install
-```
-
-Запускаем
-```shell
-docker-compose up
-```
-
-Создаем базу данных
-```shell
-docker-compose exec db psql -U postgres -c "create database backend;"
-```
-
-В браузере открываем http://localhost
-
-Запуск команд artisan
-```shell
-docker-compose exec back ash # Внутри контейнера выполняем как обычно php artisan foo:bar
-# или
-docker-compose exec back php artisan foo:bar
-# например накатить миграции
-docker-compose exec back php artisan migrate
-```
+Запуск проекта:
+1. git clone
+2. composer install
+3. copy .env.example to .env and change database connection
+4. php artisan migrate
+5. Great;)
