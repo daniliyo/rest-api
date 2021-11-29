@@ -1,0 +1,296 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "REST API 1documention",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/api"
+        }
+    ],
+    "paths": {
+        "/departments": {
+            "get": {
+                "tags": [
+                    "departments"
+                ],
+                "summary": "Departments",
+                "description": "List all deportments + count employees + max salara + pagination",
+                "operationId": "departments",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "departments"
+                ],
+                "summary": "Departments",
+                "description": "Create a new departament",
+                "operationId": "departments",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Narketing Dep."
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/departments/{id}": {
+            "put": {
+                "tags": [
+                    "departments"
+                ],
+                "summary": "Departments",
+                "description": "Update departments",
+                "operationId": "departments",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "Rename Narketing Dep."
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "departments"
+                ],
+                "summary": "Departments",
+                "description": "Delete department",
+                "operationId": "departments",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/employees": {
+            "get": {
+                "tags": [
+                    "employees"
+                ],
+                "summary": "Employees",
+                "description": "List all employees + pagination",
+                "operationId": "employees",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "employees"
+                ],
+                "summary": "Employees",
+                "description": "Create a new empoyee",
+                "operationId": "employees",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "firstname",
+                                    "lastname",
+                                    "patronymic",
+                                    "salary",
+                                    "deportaments"
+                                ],
+                                "properties": {
+                                    "firstname": {
+                                        "type": "string",
+                                        "example": "Ivan"
+                                    },
+                                    "lastname": {
+                                        "type": "string",
+                                        "example": "Ivanov"
+                                    },
+                                    "patronymic": {
+                                        "type": "string",
+                                        "example": "Olehovich"
+                                    },
+                                    "gender": {
+                                        "type": "string",
+                                        "example": "Female"
+                                    },
+                                    "salary": {
+                                        "type": "integer",
+                                        "example": "1900"
+                                    },
+                                    "deportaments": {
+                                        "type": "json",
+                                        "example": "{'0': 1, '1': 3}"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/employees/{id}": {
+            "put": {
+                "tags": [
+                    "employees"
+                ],
+                "summary": "Employees",
+                "description": "Update a employee",
+                "operationId": "employees",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "firstname",
+                                    "lastname",
+                                    "patronymic",
+                                    "salary",
+                                    "deportaments"
+                                ],
+                                "properties": {
+                                    "firstname": {
+                                        "type": "string",
+                                        "example": "Ivan"
+                                    },
+                                    "lastname": {
+                                        "type": "string",
+                                        "example": "Ivanov"
+                                    },
+                                    "patronymic": {
+                                        "type": "string",
+                                        "example": "Olehovich"
+                                    },
+                                    "gender": {
+                                        "type": "string",
+                                        "example": "Female"
+                                    },
+                                    "salary": {
+                                        "type": "integer",
+                                        "example": "1900"
+                                    },
+                                    "deportaments": {
+                                        "type": "json",
+                                        "example": "{'0': 1, '1': 3}"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "employees"
+                ],
+                "summary": "Employees",
+                "operationId": "employees",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

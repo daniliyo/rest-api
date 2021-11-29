@@ -11,7 +11,9 @@ class Employee extends Model
 
     public $timestamps = false;
 
+    protected $fillable = ['firstname', 'lastname', 'patronymic', 'gender', 'salary'];
+
     public function departments(){
-    	return $this->belongsToMane(Department::class);
+    	return $this->belongsToMany(Department::class);
     }
 }

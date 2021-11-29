@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,9 @@ use App\Http\Controllers\DepartmentController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('/', function(){
+   echo '23';
+});
 
-//Route::apiResource('department', DepartmentController::class);
-
-Route::post('/department/store', [DepartmentController::class, 'store']);
-Route::put('/department/update/{id}', [DepartmentController::class, 'update']);
-//Route::put('/department/update/{$id}', [DepartmentController::class, 'update']);
-
+Route::apiResource('departments', DepartmentController::class);
+Route::apiResource('employees', EmployeeController::class);

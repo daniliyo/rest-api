@@ -14,6 +14,6 @@ class Department extends Model
     protected $fillable = ['name'];
 
     public function employee(){
-    	return $this->belongsToMany(Department::class);
+    	return $this->belongsToMany(Employee::class);
     }
 }
